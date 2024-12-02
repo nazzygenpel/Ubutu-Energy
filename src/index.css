@@ -11,7 +11,7 @@
   font-family: "Avenir";
   font-style: normal;
   font-weight: 400;
-  max-width: 1284px;
+  max-width: 100%;
 }
 
 /* Features Styling */
@@ -20,6 +20,7 @@
   margin: auto;
   padding-top: 1rem;
 }
+
 @media (max-width: 768px) {
   .feature-container {
     padding-top: 8rem;
@@ -56,6 +57,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   padding: 2rem;
+  width: 70%;
 }
 .main-feature p {
   font-size: 16px;
@@ -65,6 +67,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   padding: 2rem;
+  width: 70%;
 }
 @media (max-width: 768px) {
   .main-feature {
@@ -72,6 +75,12 @@
   }
   .diff-main-feature {
     flex-direction: column-reverse;
+  }
+  .main-feature p {
+    width: 100%;
+  }
+  .diff-main-feature p {
+    width: 100%;
   }
 }
 
@@ -397,7 +406,6 @@
   top: 100px;
   text-align: center;
 }
-
 .hero-text {
   font-size: 3rem;
   line-height: 60px;
@@ -408,13 +416,6 @@
   width: 100%;
   max-width: 700px;
 }
-@media (max-width: 768px) {
-  .hero-text {
-    font-size: 40px;
-    margin-bottom: 0.5rem;
-  }
-}
-
 .image-bg {
   background-color: #fff;
   width: 150px;
@@ -425,15 +426,6 @@
   position: relative;
   left: 23px;
 }
-
-@media (max-width: 768px) {
-  .image-bg {
-    align-items: center;
-    width: 110px;
-    height: 110px;
-  }
-}
-
 .center-img {
   position: relative;
   bottom: -13px;
@@ -446,37 +438,45 @@
   border-radius: 100px;
   padding: 1rem 0;
 }
-@media (max-width: 768px) {
-  .center-img {
-    flex-direction: row;
-    width: 277px;
-    height: 130px;
-    align-items: center;
-    top: 10px;
-  }
-}
-
 .center-icons {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-@media (max-width: 768px) {
-  .center-icons {
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 1rem;
-  }
 }
 #opp-deskarrow {
   transform: rotate(180deg);
   position: relative;
   left: -20px;
 }
-
 #actual-deskarrow {
   position: relative;
   left: 20px;
+}
+.blurImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  align-items: center;
+}
+.greenImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5c9f27;
+}
+.scroll-indicator {
+  margin: auto;
+  margin-top: 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -490,45 +490,42 @@
     left: 0px;
     top: 10px;
   }
-}
-
-.blurImage {
-  width: 150px;
-  height: 150px;
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  backdrop-filter: blur(4px);
-  align-items: center;
-}
-@media (max-width: 768px) {
-  .blurImage {
+  .center-icons {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .center-img {
+    flex-direction: row;
+    width: 277px;
+    height: 130px;
+    align-items: center;
+    top: 10px;
+  }
+  .image-bg {
+    align-items: center;
     width: 110px;
     height: 110px;
-    align-items: center;
-    justify-content: center;
   }
-}
-.greenImage {
-  width: 150px;
-  height: 150px;
-  border-radius: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #5c9f27;
-}
-
-@media (max-width: 768px) {
+  .hero-text {
+    font-size: 40px;
+    margin-bottom: 0.5rem;
+  }
   .greenImage {
     width: 105px;
     height: 105px;
     justify-content: center;
     margin-top: 1rem;
   }
-}
-.scroll-indicator {
-  margin-top: 2rem;
+  .scroll-indicator {
+    margin-top: 5%;
+  }
+  .blurImage {
+    width: 110px;
+    height: 110px;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* Styling for the How it works component section  */
@@ -650,13 +647,6 @@ strong {
   border-radius: 50px;
 }
 
-/* .step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 300px;
-} */
-
 /* Styles for footer */
 
 .footer {
@@ -726,7 +716,7 @@ strong {
 /* Media Queries for the footer Responsiveness */
 @media (max-width: 768px) {
   .footer {
-    height: 1050px;
+    height: 1100px;
   }
   .footer-container {
     flex-direction: column;

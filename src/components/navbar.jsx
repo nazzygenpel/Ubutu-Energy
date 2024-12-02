@@ -94,8 +94,12 @@ const Navbar = () => {
             </div>
           </div>
           <div className="scroll-indicator">
-            <img src={Scroll} />
-            <p>Scroll down</p>
+            <div>
+              <img src={Scroll} />
+            </div>
+            <div>
+              <p>Scroll down</p>
+            </div>
           </div>
         </div>
       </header>

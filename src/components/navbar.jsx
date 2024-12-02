@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 // import { Link, NavLink } from "react-router-dom";
 import {
   Analysisboard,
@@ -19,8 +20,26 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  // const [isHero, setIsHero] = useState(false);
+  // const heroref = useRef(null);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (heroref.current) {
+  //       const { bottom } = heroref.current.getBoundingClientRect();
+  //       setIsHero(bottom <= 0);
+  //     }
+  //   };
+
+  //   window.addEventListener(scroll, handleScroll);
+  //   return () => {
+  //     window.removeEventListener(scroll, handleScroll);
+  //   };
+  // }, []);
+
   return (
     <section className="nav-container">
+      {/* {ishero ? (add the navSturcture) : (transparent navBar)} */}
       <header className="hero-header">
         {/* Navbar section */}
         <nav className="navbar">

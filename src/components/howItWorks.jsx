@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   ImageFour,
   ImageOne,
@@ -8,30 +10,47 @@ import {
 } from "../assets";
 
 const HowItWorks = () => {
+  const [activeTab, setActiveTab] = useState("Consumers");
+
   return (
     <section className="how-it-works">
       <h2 className="feature-header">How It Works</h2>
 
       <div className="toggle-container">
         <div className="toggle-buttons">
-          <div className="how-it-works-active">
-            <img src={Plug} />
+          {/* Consumers Button */}
+
+          <button
+            className={`how-it-works-active ${
+              activeTab === "Consumers" ? "active" : ""
+            }`}
+            onClick={() => setActiveTab("Consumers")}
+          >
+            <img src={Plug} alt="Plug Icon" />
             <p>Consumers</p>
-          </div>
-          <button className="anchorbutton">
-            <img src={Lighting} />
+          </button>
+
+          {/* Anchors Button */}
+          <button
+            className={`anchorbutton ${
+              activeTab === "Anchors" ? "active" : ""
+            }`}
+            onClick={() => setActiveTab("Anchors")}
+          >
+            <img src={Lighting} alt="Lighting Icon" />
             Anchors
           </button>
         </div>
       </div>
 
       <div className="steps">
+        {/* Consumers Steps */}
         <div className="firstcontainer">
           <div className="circle-div">
             <div className="circle">
               <p> 1 </p>
 
-              <img src={ImageOne} />
+              <img src={ImageOne} alt="Step 1" />
             </div>
             <div className="content">
               <p>
@@ -43,7 +62,7 @@ const HowItWorks = () => {
           <div className="circle-div">
             <div className="circle">
               <p> 2 </p>
-              <img src={ImageThree} />
+              <img src={ImageThree} alt="Step 2" />
             </div>
             <div className="content">
               <p>
@@ -59,7 +78,7 @@ const HowItWorks = () => {
           <div className="circle-div">
             <div className="circle">
               <p>3</p>
-              <img src={ImageTwo} />
+              <img src={ImageTwo} alt="Step 3" />
             </div>
             <div className="content">
               <p>
@@ -70,7 +89,7 @@ const HowItWorks = () => {
           <div className="circle-div">
             <div className="circle">
               <p>4</p>
-              <img src={ImageFour} />
+              <img src={ImageFour} alt="Step 4" />
             </div>
             <div className="content">
               <p>

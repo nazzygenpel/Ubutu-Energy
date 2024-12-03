@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // import { Link, NavLink } from "react-router-dom";
 import {
@@ -20,29 +20,34 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  // const [isHero, setIsHero] = useState(false);
-  // const heroref = useRef(null);
+  const [isHero, setIsHero] = useState(true);
+  const heroRef = useRef(null);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (heroref.current) {
-  //       const { bottom } = heroref.current.getBoundingClientRect();
-  //       setIsHero(bottom <= 0);
-  //     }
-  //   };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (heroRef.current) {
+        const { bottom } = heroRef.current.getBoundingClientRect();
+        setIsHero(bottom > 0);
+      }
+    };
 
-  //   window.addEventListener(scroll, handleScroll);
-  //   return () => {
-  //     window.removeEventListener(scroll, handleScroll);
-  //   };
-  // }, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <section className="nav-container">
-      {/* {ishero ? (add the navSturcture) : (transparent navBar)} */}
-      <header className="hero-header">
+      <header ref={heroRef} className="hero-header">
         {/* Navbar section */}
-        <nav className="navbar">
+        <nav
+          className="navbar"
+          style={{
+            backgroundColor: isHero ? "transparent" : "#5C9F27",
+            transition: "background-color 0.1s ease-in-out",
+          }}
+        >
           <div className="logo">
             <img src={svgLogo} alt="Ubuntu Energy Logo" />
           </div>
@@ -84,6 +89,7 @@ const Navbar = () => {
         </nav>
 
         {/* Hero Section  */}
+
         <div className="hero-content">
           <h1 className="hero-text">
             Transforming wasted energy

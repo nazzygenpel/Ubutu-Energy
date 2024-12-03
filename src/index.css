@@ -223,10 +223,10 @@
   padding: 1.2rem 1rem;
   position: fixed;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   z-index: 1000;
   margin: auto;
-  max-width: 1400px;
+  max-width: 1300px;
 }
 
 .nav-links {
@@ -666,7 +666,12 @@ strong {
   font-weight: bold;
   margin: 0;
   padding-bottom: 3rem;
-  padding-top: 4.5rem;
+  padding: 5.5rem 0rem;
+}
+@media (max-width: 768px) {
+  .footer-logo {
+    padding: 4rem 0rem;
+  }
 }
 
 .footer-columns {

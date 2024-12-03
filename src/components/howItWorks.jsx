@@ -13,7 +13,7 @@ const HowItWorks = () => {
   const [activeTab, setActiveTab] = useState("Consumers");
 
   return (
-    <section className="how-it-works">
+    <section className="how-it-works" id="how-it-works-id">
       <h2 className="feature-header">How It Works</h2>
 
       <div className="toggle-container">

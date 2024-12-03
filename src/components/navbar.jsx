@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // import { Link, NavLink } from "react-router-dom";
-import { Hamburger, svgLogo } from "../assets";
+import { Hamburger, svgLogo, WhiteLogo } from "../assets";
 import MobileNavBar from "./mobileNavbar";
 
 const Navbar = ({ isHero }) => {
@@ -14,7 +14,6 @@ const Navbar = ({ isHero }) => {
 
   return (
     <section className="nav-container">
-      {/* Navbar section */}
       <nav
         className="navbar"
         style={{
@@ -22,9 +21,16 @@ const Navbar = ({ isHero }) => {
           transition: "background-color 0.3s ease-in-out",
         }}
       >
-        <div className="logo">
-          <img src={svgLogo} alt="Ubuntu Energy Logo" />
-        </div>
+        {isHero ? (
+          <div className="logo">
+            <img src={svgLogo} alt="Ubuntu Energy Logo" />
+          </div>
+        ) : (
+          <div className="logo">
+            <img src={WhiteLogo} alt="Ubuntu Energy Logo" />
+          </div>
+        )}
+
         <div
           className="hamburger"
           aria-label="Toggle menu"
@@ -35,16 +41,16 @@ const Navbar = ({ isHero }) => {
         <div className="menu-nav-link">
           <ul className="nav-links">
             <li>
-              <a href="#home">Home</a>
+              <a href="#herosection-id">Home</a>
             </li>
             <li>
-              <a href="#how-it-works">How It Works</a>
+              <a href="#how-it-works-id">How It Works</a>
             </li>
             <li>
-              <a href="#about-us">About Us</a>
+              <a href="#about-us-id">About Us</a>
             </li>
             <li>
-              <a href="#contact-us">Contact Us</a>
+              <a href="#footer-id">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -53,11 +59,19 @@ const Navbar = ({ isHero }) => {
             <li>
               <a href="#sign-in">Sign In</a>
             </li>
-            <li>
-              <a href="#download" className="btn">
-                Download
-              </a>
-            </li>
+            {isHero ? (
+              <li>
+                <a href="#download" className="btn">
+                  Download
+                </a>
+              </li>
+            ) : (
+              <li>
+                <a href="#download" className="btn-green">
+                  Download
+                </a>
+              </li>
+            )}
           </ul>
         </div>
       </nav>

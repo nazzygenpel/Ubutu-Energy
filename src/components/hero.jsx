@@ -11,7 +11,7 @@ import {
 const Hero = forwardRef((props, ref) => {
   return (
     <div>
-      <header ref={ref} className="hero-header">
+      <header ref={ref} className="hero-header" id="herosection-id">
         <div className="hero-content">
           <h1 className="hero-text">
             Transforming wasted energy

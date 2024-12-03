@@ -25,7 +25,9 @@ import MobilecancelButton from "./svgs/cancelbutton.svg";
 import ArrowDesk from "./svgs/arrowforDesk.svg";
 import ArrowMobile from "./svgs/arrowformobile.svg";
 import Scroll from "./svgs/scrolldown.svg";
+import WhiteLogo from "./svgs/white-logo.svg";
 export {
+  WhiteLogo,
   Logo,
   PoleImage,
   MidImage,

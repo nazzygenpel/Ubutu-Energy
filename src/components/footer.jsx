@@ -2,7 +2,7 @@ import { AppStore, FooterLogo, GooglePlay } from "../assets";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" id="footer-id">
       <div className="footer-logo">
         <img src={FooterLogo} alt="Logo" />
       </div>

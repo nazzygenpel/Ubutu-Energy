@@ -22,7 +22,7 @@ const HowItWorks = () => {
 
           <button
             className={`how-it-works-active ${
-              activeTab === "Consumers" ? "active" : ""
+              activeTab === "Consumers" ? "buttonactive" : ""
             }`}
             onClick={() => setActiveTab("Consumers")}
           >
@@ -33,7 +33,7 @@ const HowItWorks = () => {
           {/* Anchors Button */}
           <button
             className={`anchorbutton ${
-              activeTab === "Anchors" ? "active" : ""
+              activeTab === "Anchors" ? "buttonactive" : ""
             }`}
             onClick={() => setActiveTab("Anchors")}
           >
@@ -46,6 +46,7 @@ const HowItWorks = () => {
       <div className="steps">
         {/* Consumers Steps */}
         <div className="firstcontainer">
+          {activeTab === "Consumers" && <div className="firstcontainer"></div>}
           <div className="circle-div">
             <div className="circle">
               <p> 1 </p>

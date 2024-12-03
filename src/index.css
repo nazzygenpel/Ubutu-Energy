@@ -85,7 +85,7 @@
 /* About Us Styles */
 .about-us {
   padding: 4rem 2rem;
-  max-width: 100%;
+  max-width: 95%;
   margin: auto;
   border-radius: 32px;
 }
@@ -202,9 +202,8 @@
 /* Navbar and Hero Styles */
 .nav-container {
   padding: 0%;
-  margin: 0%;
   box-sizing: border-box;
-  height: 752px;
+  /* height: 752px; */
   width: 100%;
   margin: auto;
 }
@@ -224,18 +223,12 @@
   padding: 1.2rem 1rem;
   position: fixed;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   z-index: 1000;
   margin: auto;
+  max-width: 1400px;
 }
-@media (max-width: 768px) {
-  .menu-nav-link {
-    display: none;
-  }
-  .hero-header {
-    height: 920px;
-  }
-}
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -284,7 +277,6 @@
     padding: 10px;
     border-radius: 5px;
   }
-
   .nav-links.active {
     display: flex;
     width: 500px;
@@ -294,6 +286,13 @@
 
   .hamburger {
     display: block;
+  }
+
+  .menu-nav-link {
+    display: none;
+  }
+  .hero-header {
+    height: 920px;
   }
 }
 
@@ -321,13 +320,6 @@
   pointer-events: all;
   transition: all 0.2s ease-in-out;
 }
-
-@media (min-width: 769px) {
-  .Mobilecontainer {
-    display: none;
-  }
-}
-
 .header-menu {
   display: flex;
   justify-content: space-between;
@@ -344,7 +336,6 @@
   height: calc(100dvh - 100px);
   margin-top: 20px;
 }
-
 .mobile-nav-link a {
   text-decoration: none;
   color: #fff;
@@ -384,10 +375,16 @@
   color: #333;
 }
 
+@media (min-width: 769px) {
+  .Mobilecontainer {
+    display: none;
+  }
+}
+
 /* Hero Styling */
 .hero-content {
   position: relative;
-  max-width: 700px;
+  max-width: 710px;
   margin: auto;
   padding-top: 2rem;
   top: 100px;
@@ -598,6 +595,16 @@ strong {
 }
 
 .how-it-works-active {
+  /* background: #5c9f27; */
+  display: flex;
+  align-items: center;
+  color: black;
+  /* color: white; */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+}
+.buttonactive {
   background: #5c9f27;
   display: flex;
   align-items: center;
@@ -611,7 +618,7 @@ strong {
   display: flex;
   align-items: center;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   cursor: pointer;
 }
 .toggle-buttons {

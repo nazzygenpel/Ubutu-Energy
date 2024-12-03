@@ -299,7 +299,7 @@
     display: none;
   }
   .hero-header {
-    height: 800px;
+    height: 850px;
   }
 }
 
@@ -314,7 +314,7 @@
   padding: 1rem;
   position: fixed;
   opacity: 0;
-  z-index: -10000;
+  z-index: 10000;
   width: 100dvw;
   pointer-events: none;
   transition: all 0.2s ease-in-out;
@@ -323,7 +323,7 @@
   top: 0;
   bottom: 0;
   opacity: 1;
-  z-index: 100;
+  z-index: 1000;
   pointer-events: all;
   transition: all 0.2s ease-in-out;
 }

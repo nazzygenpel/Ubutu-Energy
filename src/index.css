@@ -225,7 +225,7 @@
   justify-content: space-between;
   z-index: 1000;
   margin: auto;
-  max-width: 1300px;
+  /* max-width: 1300px; */
 }
 @media (max-width: 768px) {
   .navbar {
@@ -335,7 +335,6 @@
   background: #5c9f27;
   border: none;
 }
-
 .nav-midsection {
   display: flex;
   flex-direction: column;

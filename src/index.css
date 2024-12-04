@@ -206,6 +206,7 @@
   box-sizing: border-box;
   width: 100%;
   margin: auto;
+  flex-wrap: wrap;
 }
 .hero-header {
   background-image: url("./assets/images/Background-img.png");
@@ -337,8 +338,8 @@
   border: none;
 }
 .nav-midsection {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   overflow-y: auto;
   height: calc(100dvh - 100px);
   margin-top: 20px;

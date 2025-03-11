@@ -20,16 +20,16 @@ const MobileNavBar = ({ isOpen, toggle }) => {
           <div className="mobile-nav-link">
             <ul>
               <li>
-                <a href="#home">Home</a>
+                <a href="#herosection-id">Home</a>
               </li>
               <li>
-                <a href="#how-it-works">How It Works</a>
+                <a href="#how-it-works-id">How It Works</a>
               </li>
               <li>
-                <a href="#about-us">About Us</a>
+                <a href="#about-us-id">About Us</a>
               </li>
               <li>
-                <a href="#contact-us">Contact Us</a>
+                <a href="#footer-id">Contact Us</a>
               </li>
               <li>
                 <a href="#download">Download</a>
